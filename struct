@@ -1,0 +1,40 @@
+User
+-id
+-username
+-password
+-role (admin,user)
+
+Restaurant
+-id
+-name
+-owner_id
+-address
+
+Rating
+-user_id
+-restaurant_id
+-point
+-comment
+
+--Login
+database contain input.username
+user.password = input.password
+
+--Manage
+- Add restaurant
+- Edit restaurant (owner or admin)
+- Delete restaurant (owner or admin)
+
+--Guest
+- Add review
+- View restaurant with reviews
+
+--Admin
+- Add user
+- Add restaurant
+- Edit restaurant (all)
+- Delete restaurant (all)
+- Delete review (all)
+
+
+
