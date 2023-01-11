@@ -27,4 +27,4 @@ class User:
         self.__role = role
 
     def getRole(self):
-        self.__role
+        return self.__role

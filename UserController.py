@@ -2,7 +2,7 @@ def addUser():
     from database import users
     from User import User
     username = input("Username:")
-    password = input("Password")
+    password = input("Password:")
     maxId = 0
     for user in users:
         if user.getId() > maxId:
@@ -25,5 +25,10 @@ def addUser():
 
 def showUser():
     from database import users
+    print("___________________________________________")
     for user in users:
-        print(user.__dict__)
+        print("ID:" + str(user.getId()), end=" | ")
+        print("Username:" + user.getUserName(), end=" | ")
+        print("Role:" + user.getRole(), end=" | ")
+        print()
+        print("___________________________________________")
