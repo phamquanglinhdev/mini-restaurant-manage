@@ -34,3 +34,10 @@ class Restaurant:
         for user in users:
             if user.getId() == self.__owner_id:
                 return user.getUserName()
+
+    def avgPoint(self):
+        avgPoint = []
+        from database import reviews
+        for review in reviews:
+            if review.getRestaurantId() == self.getId():
+                avgPoint.append(review.getPoint())

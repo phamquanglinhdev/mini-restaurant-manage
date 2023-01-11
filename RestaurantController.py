@@ -25,3 +25,17 @@ def showRestaurant():
         print("Owner:", restaurant.getOwnerUserName())
         print("Address:", restaurant.getAddress())
         print("_______________________________________")
+
+
+def showSingleRestaurant(ids):
+    currentRestaurant = None
+    from database import restaurants
+    for restaurant in restaurants:
+        if restaurant.getId() == ids:
+            currentRestaurant = restaurant
+    if currentRestaurant is not None:
+        print("--------------", currentRestaurant.getName(), "---------------")
+        print("|", "Restaurant Name:", currentRestaurant.getName())
+        print("|", "Restaurant Owner:", currentRestaurant.getOwnerUserName())
+        print("|", "Restaurant Address:", currentRestaurant.getAddress())
+        print("|", "AVG Point:", currentRestaurant.getAddress())

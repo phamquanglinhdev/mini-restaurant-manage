@@ -1,3 +1,4 @@
+from Review import Review
 from User import User
 from Restaurant import Restaurant
 
@@ -23,3 +24,10 @@ initRestaurant.setName("KFC")
 initRestaurant.setAddress("USA")
 initRestaurant.setOwnId(1)
 restaurants.append(initRestaurant)
+
+reviews = []
+initReview = Review()
+initReview.setUserId(1)
+initReview.setRestaurantId(1)
+initReview.setPoint(5)
+initReview.setMessage("My restaurant !")
