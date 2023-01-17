@@ -41,3 +41,12 @@ class Restaurant:
         for review in reviews:
             if review.getRestaurantId() == self.getId():
                 avgPoint.append(review.getPoint())
+        return avgPoint
+
+    def showReviewByRestaurant(self):
+        print("===========Review===============")
+        from database import reviews
+        for review in reviews:
+            if review.getRestaurantId() == self.getId():
+                review.showReview()
+        print("============================")

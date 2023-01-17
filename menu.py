@@ -5,6 +5,6 @@ def adminMenu():
     print("3.Add restaurant")
     print("4.Show all restaurant")
     print("5.Edit restaurant")
-    print("6.Delete restaurant")
+    print("6.Show single restaurant (with reviews)")
     print("7.Review")
     print("Any other number to exit")

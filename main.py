@@ -32,7 +32,30 @@ if currentUser is not None:
             elif choose == 4:
                 import RestaurantController
 
+                sortType = int(input("Sort By (1 = Id, 2= Name):"))
+                if sortType == 1:
+                    RestaurantController.showRestaurant()
+                else:
+                    RestaurantController.sortByNameRestaurant()
+                input("Press anything to back to menu")
+            elif choose == 5:
+                import RestaurantController
+
                 RestaurantController.showRestaurant()
+                RestaurantController.editRestaurant(int(input("Enter id of restaurant:")), currentUser)
+                input("Press anything to back to menu")
+            elif choose == 6:
+                import RestaurantController
+
+                RestaurantController.showRestaurant()
+                RestaurantController.showSingleRestaurant(int(input("Show restaurant ? Id :")))
+                input("Press anything to back to menu")
+            elif choose == 7:
+                import RestaurantController
+                import ReviewController
+
+                RestaurantController.showRestaurant()
+                ReviewController.addReview(currentUser.getId(), int(input("Review restaurant ? Id:")))
                 input("Press anything to back to menu")
             else:
                 print("Bye !")
